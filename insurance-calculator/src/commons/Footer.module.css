@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+}
+
+.logo {
+  height: 30px;
+  padding: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  list-style: none;
+}
+
+.footerItem {
+  margin-right: 20px;
+}
+
+.footerLink {
+  color: white;
+  text-decoration: none;
+}
