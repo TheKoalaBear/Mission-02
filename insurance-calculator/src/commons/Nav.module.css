@@ -23,12 +23,12 @@
   display: flex;
   align-items: center;
   list-style: none;
-  margin-left: auto; /* Align links to the right */
+  margin-left: auto;
   font-size: medium;
 }
 
 .navItem {
-  margin-left: 20px; /* Space between links */
+  margin-left: 20px;
   padding-top: 10px;
 }
 
@@ -40,7 +40,7 @@
   color: white;
   border: none;
   border-radius: 3px;
-  margin-left: 20px; /* Space between links and button */
+  margin-left: 20px;
   transition: background-color 0.3s ease;
 }
 
@@ -91,11 +91,11 @@
   }
 
   .navItem {
-    margin-left: 0; /* Remove space between links in mobile view */
-    margin-bottom: 10px; /* Add space between items in mobile view */
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
   .loginButton {
-    margin-left: 0; /* Remove space between links and button in mobile view */
+    margin-left: 0;
   }
 }
