@@ -1,0 +1,28 @@
+.card {
+  width: 40vw;
+  height: 50%;
+  background-color: aliceblue;
+  padding: 30px;
+  border-radius: 30px;
+  color: slategrey;
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #0066cc;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: 80%;
+    height: 60%;
+  }
+  .body {
+    min-height: 50vh;
+  }
+}

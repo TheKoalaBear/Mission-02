@@ -1,5 +1,4 @@
 import React from "react";
-import Nav from "../commons/Nav";
 
 const CarEvaluation = () => {
   return (
