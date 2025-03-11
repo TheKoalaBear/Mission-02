@@ -1,6 +1,6 @@
 .card {
-  width: 40vw;
-  height: 50%;
+  width: 50%;
+  height: auto;
   background-color: aliceblue;
   padding: 30px;
   border-radius: 30px;
@@ -9,7 +9,7 @@
 
 .body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   background-color: #0066cc;
@@ -19,8 +19,8 @@
 
 @media (max-width: 1000px) {
   .card {
-    width: 80%;
-    height: 60%;
+    width: auto;
+    height: auto;
   }
   .body {
     min-height: 50vh;
