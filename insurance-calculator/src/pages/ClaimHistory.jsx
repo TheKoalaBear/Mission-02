@@ -12,7 +12,7 @@ const ClaimHistory = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/evaluate-risk", {
+      const response = await fetch("http://localhost:4001/evaluate-risk", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
