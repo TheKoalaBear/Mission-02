@@ -29,7 +29,7 @@ const PremiumCalculator = () => {
                   const data = await response.json();
                   console.log("Premium Calculation Response:", data);
 
-                  alert(`Premium Amount: ${data.premiumAmount}`);
+                  alert(`Monthly Premium: ${data.monthly_premium}, Yearly Premium: ${data.yearly_premium}`);
             } catch (error) {
                   console.error("Error submitting API results:", error);
                   alert("An error occurred while connecting to the server. Please try again.");
@@ -50,7 +50,7 @@ const PremiumCalculator = () => {
                                                 name="carValue"
                                                 value={carValue}
                                                 onChange={(e) => setCarValue(e.target.value)}
-                                                disabled
+                                                // disabled
                                                 required
                                                 placeholder="Result from API 1"
                                                 style={{ width: "100%", height: "30px", fontSize: "20px" }}
@@ -64,7 +64,7 @@ const PremiumCalculator = () => {
                                                 name="riskRating"
                                                 value={riskRating}
                                                 onChange={(e) => setRiskRating(e.target.value)}
-                                                disabled
+                                                // disabled
                                                 required
                                                 placeholder="Result from API 2"
                                                 style={{ width: "100%", height: "30px", fontSize: "20px" }}
