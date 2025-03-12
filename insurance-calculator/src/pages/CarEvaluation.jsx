@@ -15,7 +15,7 @@ const CarEvaluation = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/ADD YOUR END POINT HERE",
+        "http://localhost:4000/calculate-car-value",
         {
           method: "POST",
           headers: {
@@ -32,7 +32,7 @@ const CarEvaluation = () => {
       const data = await response.json();
       console.log("Car Evaluation Response:", data);
 
-      alert(`Risk Level: ${data.riskLevel}\nRisk Rating: ${data.riskRating}`);
+      alert(`Car Evaluation: $${data.car_value}`);
     } catch (error) {
       console.error("Error submitting car information:", error);
       alert(
@@ -70,7 +70,7 @@ const CarEvaluation = () => {
                 onChange={(e) => setCarYear(e.target.value)}
                 required
                 placeholder="Enter car year"
-                min="1900"
+                min="1886"
                 max="2099"
                 style={{ width: "100%", height: "30px", fontSize: "20px" }}
               />
