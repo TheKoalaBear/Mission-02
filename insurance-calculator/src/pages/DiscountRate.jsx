@@ -10,7 +10,7 @@ const DiscountRate = () => {
 
     if (!age.trim() || !licenceIssueDate.trim()) {
       alert(
-        "Please fill out both Premium Price and Licence Issue Date before submitting."
+        "Please fill out both Age and Licence Issue Date before submitting."
       );
       return;
     }
