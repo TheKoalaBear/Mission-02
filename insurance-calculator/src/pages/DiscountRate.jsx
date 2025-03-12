@@ -2,24 +2,26 @@ import React, { useState } from "react";
 import styles from "./css/DiscountRate.module.css";
 
 const DiscountRate = () => {
-  const [premiumPrice, setPremiumPrice] = useState("");
+  const [age, setAge] = useState("");
   const [licenceIssueDate, setLicenceIssueDate] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!premiumPrice.trim() || !licenceIssueDate.trim()) {
-      alert("Please fill out both Premium Price and Licence Issue Date before submitting.");
+    if (!age.trim() || !licenceIssueDate.trim()) {
+      alert(
+        "Please fill out both Premium Price and Licence Issue Date before submitting."
+      );
       return;
     }
 
     try {
-      const response = await fetch("http://localhost:4000/calculate-discount", {
+      const response = await fetch("http://localhost:4003/calculate-discount", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ premiumPrice, licenceIssueDate }),
+        body: JSON.stringify({ age, licenceIssueDate }),
       });
 
       if (!response.ok) {
@@ -29,7 +31,7 @@ const DiscountRate = () => {
       const data = await response.json();
       console.log("Discount Rate Calculation Response:", data);
 
-      alert(`Discount Rate: ${data.discountRate}`);
+      alert(`Discount Rate: ${data.discount_rate}%`);
     } catch (error) {
       console.error("Error submitting form data:", error);
       alert(
@@ -45,15 +47,16 @@ const DiscountRate = () => {
           <h1>Discount Rate Calculator</h1>
           <form onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="premiumPrice">Premium Price:</label>
+              <label htmlFor="age">Age:</label>
               <input
-                type="text"
-                id="premiumPrice"
-                name="premiumPrice"
-                value={premiumPrice}
-                onChange={(e) => setPremiumPrice(e.target.value)}
+                type="number"
+                min="0"
+                id="age"
+                name="age"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
                 required
-                placeholder="Enter premium price"
+                placeholder="Enter age"
                 style={{ width: "100%", height: "30px", fontSize: "20px" }}
               />
             </div>
